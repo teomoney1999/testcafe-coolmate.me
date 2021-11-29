@@ -1,0 +1,25 @@
+{
+  "browsers": "chrome",
+  "reporter": [
+    {
+      "name": "spec"
+    }, 
+    {
+      "name": "json", 
+      "output": "reports/report.json"
+    }
+  ], 
+  "quarantineMode": false,
+  "debugMode": false, 
+  "debugOnFail": false,
+  "skipJsErrors": true, 
+  "skipUncaughtErrors": true,
+  "appInitDelay": 3000, 
+  "selectorTimeout": 3000,
+  "assertionTimeout": 1000,
+  "pageLoadTimeout": 3000,
+  "hostname": "localhost",
+  "port1": 12345,
+  "port2": 54321
+
+}

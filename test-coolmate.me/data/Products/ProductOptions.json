@@ -1,0 +1,66 @@
+{
+  "Quần Jogger": {
+    "color": 2,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Áo Tank Top": {
+    "color": 2,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Tất": {
+    "color": 0,
+    "quantity": "1"
+  },
+  "Mũ Bucket": {
+    "quantity": "1"
+  },
+  "Quần Short": {
+    "color": 0,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Túi Clean Bag": {
+    "color": 0,
+    "quantity": "1"
+  },
+  "Áo Polo": {
+    "color": 2,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Quần lót nam": {
+    "color": 0,
+    "size": "L",
+    "quantity": "1"
+  }, 
+  "Áo khoác": {
+    "color": 2,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Áo khoác xanh rêu": {
+    "color": 2,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Áo khoác đen": {
+    "color": 3,
+    "size": "L",
+    "quantity": "1"
+  },
+  "Áo khoác size XL": {
+    "color": 2,
+    "size": "XL",
+    "quantity": "1"
+  },
+  "Áo khoác size L": {
+    "color": 3,
+    "size": "L",
+    "quantity": "1"
+  }
+
+
+
+}

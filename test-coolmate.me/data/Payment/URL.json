@@ -1,0 +1,9 @@
+{
+    "Momo": "payment.momo.vn",
+    "ZaloPay": "gateway.zalopay.vn/pay", 
+    "ShopeePay": "checkout.chaipay.io/qrcode.html", 
+    "FoxPay": "portal.foxpay.vn/payment/checkout",
+    "SuccessfulPage": "www.coolmate.me//checkout/success", 
+    "FailedPage": "www.coolmate.me//checkout/error"
+    
+}

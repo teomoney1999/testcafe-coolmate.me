@@ -1,0 +1,67 @@
+{
+  "TC_GH_001": {
+    "productsKeys": ["Áo Polo"]
+  },
+  "TC_GH_002": {
+    "productsKeys": ["Áo Polo"]
+  },
+  "TC_GH_003": {
+    "productsKeys": ["Áo Tank Top", "Áo Polo"]
+  },
+  "TC_GH_004": {
+    "productsKeys": ["Áo Tank Top", "Áo Tank Top"]
+  },
+  "TC_GH_005": {
+    "productsKeys": ["Áo khoác", "Áo khoác"]
+  },
+  "TC_GH_006": {
+    "productsKeys": ["Áo khoác đen", "Áo khoác xanh rêu"]
+  },
+  "TC_GH_007": {
+    "productsKeys": ["Áo khoác size XL", "Áo khoác size L"]
+  },
+  "TC_GH_008 Not done yet": {
+    "productsKeys": ["Áo khoác"]
+  },
+  "TC_GH_009": {
+    "productsKeys": ["Áo khoác size XL"]
+  },
+  "TC_GH_010": {
+    "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_011": {
+    "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_012": {
+    "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_013": {
+    "productsKeys": ["Áo khoác size XL", "Áo khoác size XL"]
+  },
+  "TC_GH_014": {
+    "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_015": {
+    "productsKeys": ["Áo khoác size XL", "Áo khoác size L"]
+  },
+  "TC_GH_016": {
+    "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_017": {
+    "productsKeys": "Áo khoác size XL",
+    "changeValue": "Đen"
+  },
+  "TC_GH_018": {
+    "productsKeys": "Áo khoác size XL",
+    "changeValue": "L"
+  },
+  "TC_GH_019": {
+    "productsKeys": ["Áo khoác size XL", "Áo khoác size L"]
+  },
+  "TC_GH_020": {
+    "productsKeys": ["Áo khoác size XL", "Áo khoác size L"]
+  },
+  "TC_GH_021": {
+    "productsKeys": "Áo khoác size XL"
+  }
+}

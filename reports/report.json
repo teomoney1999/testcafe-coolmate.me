@@ -1,0 +1,29 @@
+{
+  "startTime": "2021-11-29T08:51:14.346Z",
+  "endTime": "2021-11-29T08:51:50.257Z",
+  "userAgents": [
+    "Chrome 96.0.4664.55 / macOS 10.15.7"
+  ],
+  "passed": 1,
+  "total": 1,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Test Payment Model",
+      "path": "/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/cart/individual-test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "TC_GH_019",
+          "meta": {},
+          "errs": [],
+          "durationMs": 35895,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}
