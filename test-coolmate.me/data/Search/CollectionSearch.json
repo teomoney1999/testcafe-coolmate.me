@@ -1,0 +1,20 @@
+{
+    "TC_TK2_001": {
+      "keywords": ["áo khoác", "ÁO KHOÁC"]
+    },
+    "TC_TK2_002": {
+      "keywords": ["áo khoác", "ao khoac"]
+    },
+    "TC_TK2_003": {
+      "keywords": "+"
+    },
+    "TC_TK2_004": {
+      "keywords": "      "
+    },
+    "TC_TK2_005": {
+      "keywords": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+    },
+    "TC_TK2_006": {
+      "keywords": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+    }
+  }

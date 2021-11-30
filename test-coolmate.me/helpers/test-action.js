@@ -131,6 +131,8 @@ class TestHelper {
     }
     return fees;
   }
+
+  async getNameFromCollectionCells()
 }
 
 export default new TestHelper();

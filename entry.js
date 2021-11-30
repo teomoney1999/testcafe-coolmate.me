@@ -1,10 +1,10 @@
 import createTestCafe from "testcafe";
+import { getArgv } from "./test-coolmate.me/reports/helper";
 
 const testCafe = await createTestCafe();
 
-const feature = "cart"; 
-// const feature = "payment"; 
-// const feature = "search"; 
+const {feature} = getArgv(process.argv);
+
 const fileTest = `./test-coolmate.me/tests/${feature}/${feature}-test.js`;
 
 try {

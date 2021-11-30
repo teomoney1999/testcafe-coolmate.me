@@ -4,13 +4,13 @@ import xPathSelector from "../../helpers/xpath-selector";
 import searchBar from "../../models/Search/Search";
 const { Selector, t } = testCafe;
 
+import helper from "../../helpers/test-action";
 
-fixture`Test Payment Model`.page`${url.home}`;
 
-test("TC_TK_001", async (t) => {
-    const task = "TC_TK_001"; 
-    await searchBar.find("Tank Top");
-    // await t.expect(searchBar.input.exists).ok().typeText(searchBar.input, "Tank Top").click(searchBar.searchBtn);
-    const spotlightLength = searchBar.spotlightSearch.length;
-    console.log('=====spotlightLength', spotlightLength);
+fixture`Test Search Page`.page`${url.home}`;
+
+test("TC_TK2_001", async (t) => {
+    const task = "TC_TK2_001"; 
+    
+
 });

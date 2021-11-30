@@ -1,10 +1,14 @@
 import { Workbook } from "excel4node";
-import { percentagesCalc } from "./test-coolmate.me/reports/helper.js";
-import report from "./test-coolmate.me/reports/json/report_cart_Tue Nov 30 2021 14:48:40 GMT+0700 (Indochina Time).json";
+import {
+  percentagesCalc,
+  getArgv,
+  readJson,
+} from "./test-coolmate.me/reports/helper.js";
+// import report from "./test-coolmate.me/reports/json/report_cart_Tue Nov 30 2021 14:48:40 GMT+0700 (Indochina Time).json";
 
-const feature = "cart"; 
-// const feature = "payment"; 
-// const feature = "search"; 
+const { feature, reportDir } = getArgv(process.argv);
+
+const report = readJson(reportDir);
 
 const reportFileName = `${feature}_report_${new Date()}`;
 
