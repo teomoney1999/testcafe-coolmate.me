@@ -132,7 +132,35 @@ class TestHelper {
     return fees;
   }
 
-  async getNameFromCollectionCells()
+  async getNameFromSpotlight(spotlightSearch) {
+    if (!spotlightSearch || !spotlightSearch.length) {
+      console.log("Spotlight search does not suggest any product!");
+      return [];
+    }
+    const namesList = [];
+    for (const product of spotlightSearch) {
+      const productName = await product.name;
+      namesList.push(productName);
+    }
+    return namesList;
+  }
+
+  async getInfoFromSpotlight(spotlightSearch) {
+    if (!spotlightSearch || !spotlightSearch.length) {
+      console.log("Spotlight search does not suggest any product!");
+      return [];
+    }
+    const namesList = [];
+    const pricesList = [];
+
+    for (const product of spotlightSearch) {
+      const productName = await product.name;
+      namesList.push(productName);
+      const productPrice = await product.price;
+      pricesList.push(productPrice);
+    }
+    return { namesList, pricesList };
+  }
 }
 
 export default new TestHelper();

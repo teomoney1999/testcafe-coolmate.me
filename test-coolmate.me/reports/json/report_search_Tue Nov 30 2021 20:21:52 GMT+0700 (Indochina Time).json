@@ -1,0 +1,150 @@
+{
+  "startTime": "2021-11-30T13:22:04.366Z",
+  "endTime": "2021-11-30T13:23:26.306Z",
+  "userAgents": [
+    "Chrome 96.0.4664.55 / macOS 10.15.7"
+  ],
+  "passed": 2,
+  "total": 12,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Test Search Page",
+      "path": "/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "TC_TK1_001",
+          "meta": {},
+          "errs": [
+            "The element that matches the specified selector is not visible.\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   31 |    ),\n   32 |  };\n   33 |\n   34 |  await t\n   35 |    .click(searchBar.searchIcon)\n > 36 |    .typeText(searchBar.input, keywords[1], { replace: true })\n   37 |    .wait(waitTime); // uppercase with sign\n   38 |\n   39 |  await searchBar.setSpotlightSearch();\n   40 |\n   41 |  const uppercaseSearch = {\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:36:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 18504,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_002",
+          "meta": {},
+          "errs": [],
+          "durationMs": 5375,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_003",
+          "meta": {},
+          "errs": [
+            "Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.\n\n   | Selector('.header-search')\n   |   .withAttribute('rel-script', 'header-search-content')\n   |   .child('.spotlight-search')\n   |   .child('.spotlight-search__wrapper')\n > |   .child('div')\n   |   .withAttribute('class', 'text-center')\n   |   .find('i')\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   104 |    .wait(waitTime); //  with sign\n   105 |\n   106 |  await searchBar.setSpotlightSearch();\n   107 |\n   108 |  //   await t.expect(searchBar.spotlightSearch.length).notEql(0);\n > 109 |  await t.expect(searchBar.notify.innerText).eql(searchNoti.notFound);\n   110 |});\n   111 |\n   112 |test(\"TC_TK1_004\", async (t) => {\n   113 |  const task = \"TC_TK1_004\";\n   114 |  const keyword = searchBarData[task].keywords;\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:109:46)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 8131,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_004",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 0 to not deeply equal 0\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   118 |    .typeText(searchBar.input, keyword, { replace: true })\n   119 |    .wait(waitTime); //  with sign\n   120 |\n   121 |  await searchBar.setSpotlightSearch();\n   122 |\n > 123 |  await t.expect(searchBar.spotlightSearch.length).notEql(0);\n   124 |});\n   125 |\n   126 |test(\"TC_TK1_005\", async (t) => {\n   127 |  const task = \"TC_TK1_005\";\n   128 |  const keyword = searchBarData[task].keywords;\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:123:52)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 3468,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_005",
+          "meta": {},
+          "errs": [
+            "Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.\n\n   | Selector('.header-search')\n   |   .withAttribute('rel-script', 'header-search-content')\n   |   .child('.spotlight-search')\n   |   .child('.spotlight-search__wrapper')\n > |   .child('div')\n   |   .withAttribute('class', 'text-center')\n   |   .find('i')\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   133 |    .wait(waitTime);\n   134 |\n   135 |  await searchBar.setSpotlightSearch();\n   136 |\n   137 |  //   await t.expect(searchBar.spotlightSearch.length).notEql(0); // still give suggestion even though type wrong product name\n > 138 |  await t.expect(searchBar.notify.innerText).eql(searchNoti.notFound);\n   139 |});\n   140 |\n   141 |test(\"TC_TK1_006\", async (t) => {\n   142 |  const task = \"TC_TK1_006\";\n   143 |  const keyword = searchBarData[task].keywords;\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:138:46)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 8049,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_006",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 0 to not deeply equal 0\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   144 |\n   145 |  await t.click(searchBar.searchIcon).wait(waitTime); //  with sign\n   146 |\n   147 |  await searchBar.setSpotlightSearch();\n   148 |\n > 149 |  await t.expect(searchBar.spotlightSearch.length).notEql(0); // still give suggestion even though type wrong product name\n   150 |  // await t.expect(searchBar.notify.innerText).eql(searchNoti.notFound);\n   151 |});\n   152 |\n   153 |test(\"TC_TK1_007\", async (t) => {\n   154 |  const task = \"TC_TK1_007\";\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:149:52)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 3743,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_007",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 0 to not deeply equal 0\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   156 |\n   157 |  await t.click(searchBar.searchIcon).wait(waitTime); //  with sign\n   158 |\n   159 |  await searchBar.setSpotlightSearch();\n   160 |\n > 161 |  await t.expect(searchBar.spotlightSearch.length).notEql(0); // still give suggestion even though type nothing\n   162 |  // await t.expect(searchBar.notify.innerText).eql(searchNoti.notFound);\n   163 |});\n   164 |\n   165 |test(\"TC_TK1_008\", async (t) => {\n   166 |  const task = \"TC_TK1_008\";\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:161:52)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 3801,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_008",
+          "meta": {},
+          "errs": [
+            "TypeError: Cannot read property 'img' of undefined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   174 |\n   175 |  await searchBar.setSpotlightSearch();\n   176 |\n   177 |  for (const key of spotlightKeys) {\n   178 |    // only check one row\n > 179 |    await t.expect(searchBar.spotlightSearch[0][key].exists).ok();\n   180 |  }\n   181 |});\n   182 |\n   183 |test(\"TC_TK1_009\", async (t) => {\n   184 |  const task = \"TC_TK1_009\";\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:179:20)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 3859,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_009",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 0 to deeply equal 5\n\n+ expected - actual\n\n-0\n+5\n\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   189 |    .typeText(searchBar.input, keyword, { replace: true })\n   190 |    .wait(waitTime); //  with sign\n   191 |\n   192 |  await searchBar.setSpotlightSearch();\n   193 |\n > 194 |  await t.expect(searchBar.spotlightSearch.length).eql(5);\n   195 |});\n   196 |\n   197 |// Can not check because can not find product that out of stock\n   198 |// test(\"TC_TK1_010\", async (t) => {\n   199 |//     const task = \"TC_TK1_010\";\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:194:52)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 4554,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_011",
+          "meta": {},
+          "errs": [
+            "Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.\n\n   | Selector('.header-search')\n   |   .withAttribute('rel-script', 'header-search-content')\n   |   .child('.spotlight-search')\n   |   .child('.spotlight-search__wrapper')\n > |   .child('div')\n   |   .withAttribute('class', 'text-center')\n   |   .find('i')\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   218 |    .typeText(searchBar.input, keyword, { replace: true })\n   219 |    .wait(waitTime);\n   220 |\n   221 |  await searchBar.setSpotlightSearch();\n   222 |  //   await t.expect(searchBar.spotlightSearch.length).notEql(0); // still give suggestion even though type wrong product name\n > 223 |  await t.expect(searchBar.notify.innerText).eql(searchNoti.notFound);\n   224 |});\n   225 |\n   226 |test(\"TC_TK1_012\", async (t) => {\n   227 |  const task = \"TC_TK1_012\";\n   228 |  const keywords = searchBarData[task].keywords;\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:223:46)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 7674,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_012",
+          "meta": {},
+          "errs": [
+            "Cannot obtain information about the node because the specified selector does not match any node in the DOM tree.\n\n   | Selector('.header-search')\n   |   .withAttribute('rel-script', 'header-search-content')\n   |   .child('.spotlight-search')\n   |   .child('.spotlight-search__wrapper')\n > |   .child('div')\n   |   .withAttribute('class', 'text-center')\n   |   .find('i')\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   243 |\n   244 |  const uppercaseSearch = {\n   245 |    suggestionNumber: searchBar.spotlightSearch.length,\n   246 |  };\n   247 |\n > 248 |  await t.expect(searchBar.notify.innerText).eql(searchNoti.notFound);\n   249 |\n   250 |  await t\n   251 |    .expect(lowercaseSearch.suggestionNumber)\n   252 |    .notEql(uppercaseSearch.suggestionNumber);\n   253 |});\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:248:46)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 8406,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_014",
+          "meta": {},
+          "errs": [],
+          "durationMs": 5797,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "The \"reporter\" option from the configuration file will be ignored."
+  ]
+}

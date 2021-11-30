@@ -35,7 +35,6 @@ test("TC_TT_001", async (t) => {
     .eql(noti.error);
 });
 
-const failed = "FAILED EXAMPLE";
 test("TC_TT_002", async (t) => {
   const task = "TC_TT_002";
   await paymentPage.fillInfo(paymentInfo[task]);
@@ -47,7 +46,6 @@ test("TC_TT_002", async (t) => {
     .eql(noti.error);
 });
 
-const successful = "SUCCESSFUL EXAMPLE";
 test("TC_TT_003", async (t) => {
   const task = "TC_TT_003";
   const methodOptions = paymentInfo[task]["methodOptions"];

@@ -1,5 +1,6 @@
 import createTestCafe from "testcafe";
-import { getArgv } from "./test-coolmate.me/reports/helper";
+
+import { getArgv } from "./test-coolmate.me/reports/helper.js";
 
 const testCafe = await createTestCafe();
 

@@ -1,20 +1,47 @@
 {
-  "TC_TK2_001": {
+  "TC_TK1_001": {
     "keywords": ["áo khoác", "ÁO KHOÁC"]
   },
-  "TC_TK_002": {
+  "TC_TK1_002": {
     "keywords": ["áo khoác", "ao khoac"]
   },
-  "TC_TK_003": {
-    "keywords": "+"
+  "TC_TK1_003": {
+    "keywords": "+ ~"
   },
-  "TC_TK_004": {
+  "TC_TK1_004": {
     "keywords": "      "
   },
-  "TC_TK_005": {
-    "keywords": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+  "TC_TK1_005": {
+    "keywords": "quầb"
   },
-  "TC_TK_006": {
-    "keywords": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+  "TC_TK1_006": {
+    "keywords": ""
+  },
+  "TC_TK1_007": {
+    "keywords": ""
+  },
+  "TC_TK1_008": {
+    "keywords": "áo"
+  },
+  "TC_TK1_009": {
+    "keywords": "áo"
+  },
+  "TC_TK_010 Not done yet": {
+    "keywords": "áo"
+  },
+  "TC_TK1_011": {
+    "keywords": "áđư"
+  },
+  "TC_TK1_012": {
+    "keywords": ["áo khoác", "khoác áo"]
+  },
+  "TC_TK1_013": {
+    "keywords": ["áo khoác", "khoác áo"]
+  },
+  "TC_TK1_014": {
+    "keywords": "áo khoác"
+  },
+  "TC_TK1_015": {
+    "keywords": "áo"
   }
 }

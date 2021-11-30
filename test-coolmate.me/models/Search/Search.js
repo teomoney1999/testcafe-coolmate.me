@@ -7,33 +7,39 @@ const { Selector, t } = testCafe;
 class Search {
   constructor() {
     this.searchIcon = xPathSelector(
-      '//*[@id="site-wrapper"]/header/div[2]/div/div[3]/div[1]/a'
+      // '//*[@id="site-wrapper"]/header/div[2]/div/div[3]/div[1]/a'
+      '//*[@id="site-wrapper"]/header/div/div/div[3]/div[1]'
     );
     this.headerSearch = Selector(".header-search").withAttribute(
       "rel-script",
       "header-search-content"
     );
     this.wrapper = this.headerSearch
-      .child("form")
+      .find("form")
       .child(".header-search__wrapper");
-    this.input = this.wrapper.child("label").child("input");
+    this.input = this.wrapper.find("label").child("input");
     this.searchBtn = this.wrapper
       .child(".header-search__filter")
       .child("button");
 
     this.spotlightWrapper = this.headerSearch
-      .child("div")
-      .child("div")
-      .withAttribute("rel-script", "spotlight-search");
+      .find(".spotlight-search")
+      .child(".spotlight-search__wrapper");
     this.spotlightSearchEl = this.spotlightWrapper.find("a");
     this.spotlightSearch = [];
+    this.notify = this.spotlightWrapper
+      .child("div")
+      .withAttribute("class", "text--center");
   }
 
   async setSpotlightSearch() {
-    const spotlightSearch = setListFromEls(
-      spotlightSearchEl,
+    const spotlightSearch = await helper.setListFromEls(
+      this.spotlightSearchEl,
       SpotlightSearchRow
     );
+    this.notify = this.spotlightWrapper
+      .child("div")
+      .withAttribute("class", "text--center");
     this.spotlightSearch = spotlightSearch;
   }
 

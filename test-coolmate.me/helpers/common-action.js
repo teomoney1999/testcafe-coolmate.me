@@ -31,7 +31,6 @@ class CommonAction {
       console.log("Element does not exists!");
       return [];
     }
-
     const elsLength = await els.count;
     const results = [];
     for (let i = 0; i < elsLength; i++) {

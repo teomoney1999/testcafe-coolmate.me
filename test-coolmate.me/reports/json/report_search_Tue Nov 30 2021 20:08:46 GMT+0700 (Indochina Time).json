@@ -1,0 +1,154 @@
+{
+  "startTime": "2021-11-30T13:08:57.327Z",
+  "endTime": "2021-11-30T13:10:08.576Z",
+  "userAgents": [
+    "Chrome 96.0.4664.55 / macOS 10.15.7"
+  ],
+  "passed": 0,
+  "total": 12,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Test Search Page",
+      "path": "/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "TC_TK1_001",
+          "meta": {},
+          "errs": [
+            "The element that matches the specified selector is not visible.\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   13 |\n   14 |test(\"TC_TK1_001\", async (t) => {\n   15 |  const task = \"TC_TK1_001\";\n   16 |  const keywords = searchBarData[task].keywords;\n   17 |\n > 18 |  await t.typeText(searchBar.input, keywords[0], { replace: true }); // lowercase with sign\n   19 |\n   20 |  await searchBar.setSpotlightSearch();\n   21 |\n   22 |  const lowercaseSearch = {\n   23 |    suggestionNumber: searchBar.spotlightSearch.length,\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:18:11)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:772)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:513)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:14:5)"
+          ],
+          "durationMs": 17261,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_002",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:57:19)"
+          ],
+          "durationMs": 4031,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_003",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:95:19)"
+          ],
+          "durationMs": 4014,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_004",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:110:19)"
+          ],
+          "durationMs": 4234,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_005",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:124:19)"
+          ],
+          "durationMs": 4476,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_006",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:136:19)"
+          ],
+          "durationMs": 4617,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_007",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:148:19)"
+          ],
+          "durationMs": 3441,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_008",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:164:19)"
+          ],
+          "durationMs": 4427,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_009",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:181:19)"
+          ],
+          "durationMs": 4303,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_011",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:210:19)"
+          ],
+          "durationMs": 5406,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_012",
+          "meta": {},
+          "errs": [
+            "ReferenceError: spotlightSearchEl is not defined\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   34 |      .find(\"i\");\n   35 |  }\n   36 |\n   37 |  async setSpotlightSearch() {\n   38 |    const spotlightSearch = await helper.setListFromEls(\n > 39 |      spotlightSearchEl,\n   40 |      SpotlightSearchRow\n   41 |    );\n   42 |    this.spotlightSearch = spotlightSearch;\n   43 |  }\n   44 |\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:39:7)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:277)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:615)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:780)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:4:521)\n   at Search.setSpotlightSearch (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/models/Search/Search.js:37:30)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:223:19)"
+          ],
+          "durationMs": 8092,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TK1_014",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 'https://www.coolmate.me/collections?keyword=%C3%A1o+kho%C3%A1c' to include 'www.coolmate.me/collections/'\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   255 |  const task = \"TC_TK1_014\";\n   256 |  const keyword = searchBarData[task].keywords;\n   257 |  const getPageUrl = ClientFunction(() => window.location.href.toString());\n   258 |\n   259 |  await t\n > 260 |    .click(searchBar.searchIcon)\n   261 |    .typeText(searchBar.input, keyword, { replace: true })\n   262 |    .pressKey(\"enter\");\n   263 |\n   264 |  await t.expect(getPageUrl()).contains(productUrl.CollectionsPage);\n   265 |});\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:260:32)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:269)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/search/search-test.js:8:607)"
+          ],
+          "durationMs": 6686,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "The \"reporter\" option from the configuration file will be ignored."
+  ]
+}
