@@ -14,8 +14,6 @@ import paymentMethod from "../../data/Payment/Methods.json";
 import noti from "../../data/Payment/Notifications.json";
 import helper from "../../helpers/test-action";
 
-// import generateReport from "../../reports/generateReport";
-
 const { Selector, t, ClientFunction } = testCafe;
 
 fixture.beforeEach(async () => {
