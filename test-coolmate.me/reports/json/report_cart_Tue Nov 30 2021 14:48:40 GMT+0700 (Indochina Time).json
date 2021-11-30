@@ -1,0 +1,251 @@
+{
+  "startTime": "2021-11-30T07:48:51.105Z",
+  "endTime": "2021-11-30T07:56:36.340Z",
+  "userAgents": [
+    "Chrome 96.0.4664.55 / macOS 10.15.7"
+  ],
+  "passed": 23,
+  "total": 25,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Test Payment Model",
+      "path": "/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/cart/cart-test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "TC_GH_001",
+          "meta": {},
+          "errs": [],
+          "durationMs": 5045,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_002",
+          "meta": {},
+          "errs": [
+            "The \"url\" argument is expected to be a non-empty string, but it was undefined.\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   22 |    await cartPage.setProductsList();\n   23 |  }\n   24 |\n   25 |  async chooseProduct(key) {\n   26 |    // to buy product with configuration attribute in ProductOption.json file\n > 27 |    await t.navigateTo(productUrl[key]);\n   28 |    const option = productOption[key];\n   29 |    const productKeys = [\"color\", \"size\", \"quantity\"];\n   30 |\n   31 |    for (let k of productKeys) {\n   32 |      if (!option.hasOwnProperty(k)) continue;\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:27:13)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:611)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:776)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:517)\n   at TestHelper.chooseProduct (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:25:28)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:79:18)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:611)\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/helpers/test-action.js:15:776)"
+          ],
+          "durationMs": 2038,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_003",
+          "meta": {},
+          "errs": [],
+          "durationMs": 20043,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_004",
+          "meta": {},
+          "errs": [],
+          "durationMs": 18349,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_005",
+          "meta": {},
+          "errs": [],
+          "durationMs": 22931,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_006",
+          "meta": {},
+          "errs": [],
+          "durationMs": 20418,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_007",
+          "meta": {},
+          "errs": [],
+          "durationMs": 20193,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_009",
+          "meta": {},
+          "errs": [],
+          "durationMs": 14395,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_010",
+          "meta": {},
+          "errs": [],
+          "durationMs": 14752,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_011",
+          "meta": {},
+          "errs": [],
+          "durationMs": 19268,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_012",
+          "meta": {},
+          "errs": [],
+          "durationMs": 17303,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_013",
+          "meta": {},
+          "errs": [],
+          "durationMs": 21509,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_014",
+          "meta": {},
+          "errs": [],
+          "durationMs": 16226,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_015",
+          "meta": {},
+          "errs": [],
+          "durationMs": 20115,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_016",
+          "meta": {},
+          "errs": [],
+          "durationMs": 14512,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_017",
+          "meta": {},
+          "errs": [],
+          "durationMs": 20525,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_018",
+          "meta": {},
+          "errs": [],
+          "durationMs": 18785,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_019",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected '1198000đ' to deeply equal '1198.000đ'\n\n+ expected - actual\n\n-1198000đ\n+1198.000đ\n\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   352 |  // get price from cart subtotal\n   353 |  const subTotalStrFromCart = await cartPage.subTotal.innerText; // 799.000đ\n   354 |  const subTotalFromCart = subTotalStrFromCart.replace(\".\", \"\"); // 799000đ\n   355 |\n   356 |  // compare 2 price and get result.\n > 357 |  await t.expect(subTotalFromProductsList).eql(subTotalFromCart);\n   358 |});\n   359 |\n   360 |test(\"TC_GH_020\", async (t) => {\n   361 |  const task = \"TC_GH_020\";\n   362 |  const keys = [\"subTotal\", \"discount\", \"shippingFee\", \"total\"];\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/cart/cart-test.js:357:44)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/cart/cart-test.js:14:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/cart/cart-test.js:14:611)"
+          ],
+          "durationMs": 21160,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_020",
+          "meta": {},
+          "errs": [],
+          "durationMs": 19131,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_022",
+          "meta": {},
+          "errs": [],
+          "durationMs": 19220,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_025",
+          "meta": {},
+          "errs": [],
+          "durationMs": 27081,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_023",
+          "meta": {},
+          "errs": [],
+          "durationMs": 19759,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_024",
+          "meta": {},
+          "errs": [],
+          "durationMs": 26890,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_025",
+          "meta": {},
+          "errs": [],
+          "durationMs": 22963,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_GH_026",
+          "meta": {},
+          "errs": [],
+          "durationMs": 22234,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "The \"reporter\" option from the configuration file will be ignored."
+  ]
+}

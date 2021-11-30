@@ -80,11 +80,9 @@ class PaymentPage {
       // Handle Radio
       if (key == "methodOptions") {
         // { methodOptions : idx }
-        console.log("infoObj[key]", infoObj[key]);
         await this[key][infoObj[key]].choose();
         continue;
       }
-
       // Handle SelectBox
       if (key == "province" || key == "district" || key == "ward") {
         // { province : "Ha Noi" }
@@ -92,7 +90,6 @@ class PaymentPage {
         await this[key].choose(infoObj[key]);
         continue;
       }
-
       if (this.hasOwnProperty(key)) {
         if (!infoObj[key]) continue;
         await t.typeText(this[key], infoObj[key]);

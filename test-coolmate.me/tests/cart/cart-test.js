@@ -8,9 +8,14 @@ import productOption from "../../data/Products/ProductOptions.json";
 
 import cartPage from "../../models/Cart/Cart";
 import cartData from "../../data/Cart/Cart.json";
+import cartNoti from "../../data/Cart/Notifications.json"
 
 import noti from "../../data/Payment/Notifications.json";
 import helper from "../../helpers/test-action";
+
+// import generateReport from "../../reports/generateReport";
+
+const { Selector, t, ClientFunction } = testCafe;
 
 fixture.beforeEach(async () => {})`Test Payment Model`.page`${url.cart}`;
 
@@ -23,7 +28,7 @@ test.before(async (t) => {
 
 test("TC_GH_002", async (t) => {
   const task = "TC_GH_002";
-  const productKeysList = cartData[task];
+  const productKeysList = cartData[task].productsKeys;
   const productNamesList = await helper.getProductNames(productKeysList);
 
   await helper.initCart();
@@ -36,7 +41,7 @@ test("TC_GH_002", async (t) => {
 
 test("TC_GH_003", async (t) => {
   const task = "TC_GH_003";
-  const productKeysList = cartData[task];
+  const productKeysList = cartData[task].productsKeys;
   const productNamesList = await helper.getProductNames(productKeysList);
 
   await helper.initCart();
@@ -339,17 +344,14 @@ test("TC_GH_019", async (t) => {
   let subTotal = 0;
   for (const product of cartPage.productsList) {
     const priceStr = await product.price.innerText;
-    const priceRemoveUnit = priceStr
-      .replace(".", "")
-      .substring(0, priceStr.length - 1); // remove "." and "đ"
-    const priceNum = parseInt(priceRemoveUnit);
+    const priceNum = helper.getPriceFromStr(priceStr);
     subTotal += priceNum;
   }
-  const subTotalFromProductsList = `${subTotal.toString()}đ`; // 799000đ
+  const subTotalFromProductsList = subTotal; // 799000đ
 
   // get price from cart subtotal
   const subTotalStrFromCart = await cartPage.subTotal.innerText; // 799.000đ
-  const subTotalFromCart = subTotalStrFromCart.replace(".", ""); // 799000đ
+  const subTotalFromCart = helper.getPriceFromStr(subTotalStrFromCart); // 799000đ
 
   // compare 2 price and get result.
   await t.expect(subTotalFromProductsList).eql(subTotalFromCart);
@@ -364,7 +366,7 @@ test("TC_GH_020", async (t) => {
 
   await helper.initCart();
 
-  const fees = helper.getFeesFromCart();
+  const fees = await helper.getFeesFromCart();
 
   const assembleFees =
     fees["subTotal"] - fees["discount"] + fees["shippingFee"];
@@ -562,3 +564,6 @@ test("TC_GH_026", async (t) => {
     .expect(totalCalc)
     .eql(cartFees["total"]);
 });
+
+
+// generateReport(`Cart_Report_${new Date()}`);

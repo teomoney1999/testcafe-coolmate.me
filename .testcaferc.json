@@ -6,7 +6,7 @@
     }, 
     {
       "name": "json", 
-      "output": "reports/report.json"
+      "output": "./test-coolmate.me/reports/report.json"
     }
   ], 
   "quarantineMode": false,

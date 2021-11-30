@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "testcafe": "testcafe chrome index.js -r json:output.json",
-    "entry": "node --experimental-json-modules entry.js"
+    "entry": "node --experimental-json-modules entry.js", 
+    "report": "node --experimental-json-modules generateReport.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "testcafe": "^1.17.1"
   },
   "dependencies": {
+    "excel4node": "^1.7.2",
     "testcafe-reporter-json": "^2.2.0"
   }
 }

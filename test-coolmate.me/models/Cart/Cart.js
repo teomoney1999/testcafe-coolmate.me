@@ -70,7 +70,6 @@ class Cart {
   }
 
   async getProductByName(name) {
-    console.log("name", name);
     for (let i = 0; i < this.productsList.length; i++) {
       const productName = await this.productsList[i].name.innerText;
       if (productName === name) {

@@ -1,0 +1,232 @@
+{
+  "startTime": "2021-11-30T07:25:13.017Z",
+  "endTime": "2021-11-30T07:35:56.334Z",
+  "userAgents": [
+    "Chrome 96.0.4664.55 / macOS 10.15.7"
+  ],
+  "passed": 15,
+  "total": 22,
+  "skipped": 0,
+  "fixtures": [
+    {
+      "name": "Test Payment Model",
+      "path": "/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js",
+      "meta": {},
+      "tests": [
+        {
+          "name": "TC_TT_001",
+          "meta": {},
+          "errs": [],
+          "durationMs": 27477,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_002",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected false to be truthy\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   41 |  const task = \"TC_TT_002\";\n   42 |  await paymentPage.fillInfo(paymentInfo[task]);\n   43 |  await t\n   44 |    .click(paymentPage.paymentBtn)\n   45 |    .expect(paymentPage.fullnameError.exists)\n > 46 |    .ok()\n   47 |    .expect(paymentPage.fullnameError.innerText)\n   48 |    .eql(noti.error);\n   49 |});\n   50 |\n   51 |const successful = \"SUCCESSFUL EXAMPLE\";\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:46:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 33926,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_003",
+          "meta": {},
+          "errs": [],
+          "durationMs": 29629,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_004",
+          "meta": {},
+          "errs": [],
+          "durationMs": 28927,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_005",
+          "meta": {},
+          "errs": [],
+          "durationMs": 29319,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_006",
+          "meta": {},
+          "errs": [],
+          "durationMs": 35248,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_007",
+          "meta": {},
+          "errs": [],
+          "durationMs": 30740,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_008",
+          "meta": {},
+          "errs": [],
+          "durationMs": 26888,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_009",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected false to be truthy\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   134 |  await paymentPage.fillInfo(paymentInfo[task]);\n   135 |\n   136 |  await t\n   137 |    .click(paymentPage.paymentBtn)\n   138 |    .expect(paymentPage.addressError.exists)\n > 139 |    .ok()\n   140 |    .expect(paymentPage.addressError.innerText)\n   141 |    .eql(noti.error);\n   142 |});\n   143 |\n   144 |test(\"TC_TT_010\", async (t) => {\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:139:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 42933,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_010",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected false to be truthy\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   146 |  await paymentPage.fillInfo(paymentInfo[task]);\n   147 |\n   148 |  await t\n   149 |    .click(paymentPage.paymentBtn)\n   150 |    .expect(paymentPage.addressError.exists)\n > 151 |    .ok()\n   152 |    .expect(paymentPage.addressError.innerText)\n   153 |    .eql(noti.error);\n   154 |});\n   155 |\n   156 |test(\"TC_TT_011\", async (t) => {\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:151:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 30371,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_011",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected false to be truthy\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   158 |  await paymentPage.fillInfo(paymentInfo[task]);\n   159 |\n   160 |  await t\n   161 |    .click(paymentPage.paymentBtn)\n   162 |    .expect(paymentPage.addressError.exists)\n > 163 |    .ok()\n   164 |    .expect(paymentPage.addressError.innerText)\n   165 |    .eql(noti.error);\n   166 |});\n   167 |\n   168 |test(\"TC_TT_012\", async (t) => {\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:163:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 31870,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_012",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected false to be truthy\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   172 |  // Payment successfully if the page redirect\n   173 |  // after click to the pay button\n   174 |  await t\n   175 |    .click(paymentPage.paymentBtn)\n   176 |    .expect(paymentPage.districtNoOption.exists)\n > 177 |    .ok()\n   178 |    .expect(paymentPage.districtNoOption.innerText)\n   179 |    .eql(noti.noOption);\n   180 |});\n   181 |\n   182 |test(\"TC_TT_013\", async (t) => {\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:177:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 30306,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_013",
+          "meta": {},
+          "errs": [],
+          "durationMs": 30184,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_014",
+          "meta": {},
+          "errs": [],
+          "durationMs": 29942,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_015",
+          "meta": {},
+          "errs": [],
+          "durationMs": 27816,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_017",
+          "meta": {},
+          "errs": [],
+          "durationMs": 11089,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_018",
+          "meta": {},
+          "errs": [],
+          "durationMs": 26519,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_019",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected false to be truthy\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   277 |  await paymentPage.fillInfo(paymentInfo[task]);\n   278 |  await t\n   279 |    .click(paymentPage.paymentBtn)\n   280 |    .expect(paymentPage.emailError.exists)\n   281 |    .ok()\n > 282 |    .expect(paymentPage.emailError.innerText)\n   283 |    .eql(noti.emailError);\n   284 |});\n   285 |\n   286 |test(\"TC_TT_020\", async (t) => {\n   287 |  const task = \"TC_TT_020\";\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:282:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 29943,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_020",
+          "meta": {},
+          "errs": [],
+          "durationMs": 23309,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_021",
+          "meta": {},
+          "errs": [
+            "AssertionError: expected 'https://checkout.chaipay.io/qrcode.html?amount=488000&channel=SHOPEEPAY&currency=VND&description=Thanh+to%C3%A1n+cho+%C4%91%C6%A1n+h%C3%A0ng+607824851&lang=vi&logo=https%3A%2F%2Fchaiport-pg-icons-standard-16-9.s3.ap-southeast-1.amazonaws.com%2Fshopeepay.jpg&merchant_order_ref=61a5d41e2ea6a87798051c95&method=SHOPEEPAY_WALLET&order_ref=21d4aZ6jsNpa4VDeAoQgoyWKMEB&qrcodeurl=https%3A%2F%2Fapi.airpay.vn%2Fmerchanttools%2Fqrcode%3Fcode%3DMDAwMjAxMDEwMjEyMjY2MjAwMTN2bi5haXJwYXkud3d3MDE0MTAxMjExMTMwMTQzNDU1Mjk4NzMyOWtqb21oVTZFMWNwV041RENqU3dRNTIwNDU4MTI1MzAzNzA0NTQwNjQ4ODAwMDU4MDJWTjU5MTZDb29sbWF0ZV9Dc0JfT25sNjMwNDZDQjY%3D&time=10' to include null\n\nBrowser: Chrome 96.0.4664.55 / macOS 10.15.7\n\n   306 |  // after click to the pay button\n   307 |  await t\n   308 |    .click(paymentPage.paymentBtn)\n   309 |    .expect(getPageUrl())\n   310 |    .contains(paymentMethodUrl, { timeout: 3000 });\n > 311 |});\n   312 |\n   313 |test(\"TC_TT_022\", async (t) => {\n   314 |  const task = \"TC_TT_022\";\n   315 |  const methodOptions = paymentInfo[task][\"methodOptions\"];\n   316 |  const paymentMethodUrl = helper.getPaymentMethodUrl(methodOptions);\n\n   at <anonymous> (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:311:6)\n   at asyncGeneratorStep (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:273)\n   at _next (/Users/teomoney/Documents/software_testing_project/test-coolmate.me/tests/payment/payment-test.js:15:611)"
+          ],
+          "durationMs": 29014,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_022",
+          "meta": {},
+          "errs": [],
+          "durationMs": 29610,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        },
+        {
+          "name": "TC_TT_023",
+          "meta": {},
+          "errs": [],
+          "durationMs": 27898,
+          "unstable": false,
+          "screenshotPath": null,
+          "skipped": false
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}
