@@ -12,9 +12,7 @@ import cartData from "../../data/Cart/Cart.json";
 import noti from "../../data/Payment/Notifications.json";
 import helper from "../../helpers/test-action";
 
-fixture.beforeEach(async () => {
-
-})`Test Payment Model`.page`${url.cart}`;
+fixture.beforeEach(async () => {})`Test Payment Model`.page`${url.cart}`;
 
 test.before(async (t) => {
   await helper.initCart();
@@ -347,7 +345,7 @@ test("TC_GH_019", async (t) => {
     const priceNum = parseInt(priceRemoveUnit);
     subTotal += priceNum;
   }
-  const subTotalFromProductsList = `${subTotal.toString()}đ`;   // 799000đ
+  const subTotalFromProductsList = `${subTotal.toString()}đ`; // 799000đ
 
   // get price from cart subtotal
   const subTotalStrFromCart = await cartPage.subTotal.innerText; // 799.000đ
@@ -355,4 +353,212 @@ test("TC_GH_019", async (t) => {
 
   // compare 2 price and get result.
   await t.expect(subTotalFromProductsList).eql(subTotalFromCart);
+});
+
+test("TC_GH_020", async (t) => {
+  const task = "TC_GH_020";
+  const keys = ["subTotal", "discount", "shippingFee", "total"];
+
+  const productKeyList = cartData[task].productsKeys;
+  await helper.addProductsToCart(productKeyList);
+
+  await helper.initCart();
+
+  const fees = helper.getFeesFromCart();
+
+  const assembleFees =
+    fees["subTotal"] - fees["discount"] + fees["shippingFee"];
+  // compare 2 price and get result.
+  await t.expect(assembleFees).eql(fees["total"]);
+});
+
+// TC_GH_021 can not be done because I can't find any coupon code online
+// What a bizzare reason! My dog ate my homework. But it true though!
+
+test("TC_GH_022", async (t) => {
+  const task = "TC_GH_022";
+
+  const productKey = cartData[task].productsKeys;
+  await helper.chooseProduct(productKey);
+
+  await helper.initCart();
+
+  // type coupon code
+  // expect error notify
+  await t
+    .typeText(cartPage.coupon, cartData[task].couponCode)
+    // .click(cartPage.applyCoupon)
+    .pressKey("enter")
+    .wait(500)
+    .expect(cartPage.couponError.innerText)
+    .eql(cartNoti.couponNotExist);
+});
+
+test("TC_GH_025", async (t) => {
+  // Explain:
+  // Firstly, buy a product and save it fees info
+  // Secondly, buy another product and update to the first-buy fees info
+  // Finally, compare the total on the web with the first-buy fees info total
+  const task = "TC_GH_025";
+  // First buy
+  await helper.chooseProduct(cartData[task].productsKeys[0]);
+
+  await helper.initCart();
+  const firstBuyFees = await helper.getFeesFromCart();
+
+  // Second buy
+  await helper.chooseProduct(cartData[task].productsKeys[1]);
+  const productPrice = await productPage.price.innerText;
+
+  // update by code to compare with result from the web
+  firstBuyFees["subTotal"] += helper.getPriceFromStr(productPrice);
+
+  await helper.initCart();
+  const secondBuyFees = await helper.getFeesFromCart();
+
+  // sync the shipping fee between two bill
+  if (secondBuyFees["shippingFee"] === 0) {
+    firstBuyFees["shippingFee"] === 0;
+  }
+
+  // calculate the total after adding product price to the firstBuyFees
+  firstBuyFees["total"] =
+    firstBuyFees["subTotal"] -
+    firstBuyFees["discount"] +
+    firstBuyFees["shippingFee"];
+  // compare total of the first time that has been modified, to total of the second time buy
+  await t.expect(firstBuyFees["total"]).eql(secondBuyFees["total"]);
+});
+
+test("TC_GH_023", async (t) => {
+  const task = "TC_GH_023";
+
+  const productKey = cartData[task].productsKeys;
+
+  await helper.chooseProduct(productKey);
+  await helper.initCart();
+
+  // increase quantity
+  const changeTimes = 2;
+  await cartPage.productsList[0].increaseQuantity(changeTimes);
+  await helper.initCart();
+
+  const cartFees = await helper.getFeesFromCart();
+  const totalCalc =
+    cartFees["subTotal"] - cartFees["discount"] + cartFees["shippingFee"];
+
+  let subTotalCalc = 0;
+  for (const product of cartPage.productsList) {
+    const priceStr = await product.price.innerText;
+    const productPrice = helper.getPriceFromStr(priceStr);
+    subTotalCalc += productPrice;
+  }
+  await t
+    // compare subTotal: calculate and from web
+    .expect(subTotalCalc)
+    .eql(cartFees["subTotal"])
+    // compare total: calculate and from web
+    .expect(totalCalc)
+    .eql(cartFees["total"]);
+});
+
+test("TC_GH_024", async (t) => {
+  const task = "TC_GH_024";
+
+  const productKeyList = cartData[task].productsKeys;
+
+  await helper.addProductsToCart(productKeyList);
+  await helper.initCart();
+
+  // decrease quantity
+  const changeTimes = 1;
+  await cartPage.productsList[0].increaseQuantity(changeTimes);
+  await helper.initCart();
+
+  const cartFees = await helper.getFeesFromCart();
+  const totalCalc =
+    cartFees["subTotal"] - cartFees["discount"] + cartFees["shippingFee"];
+
+  let subTotalCalc = 0;
+  for (const product of cartPage.productsList) {
+    const priceStr = await product.price.innerText;
+    const productPrice = helper.getPriceFromStr(priceStr);
+    subTotalCalc += productPrice;
+  }
+  await t
+    // compare subTotal: calculate and from web
+    .expect(subTotalCalc)
+    .eql(cartFees["subTotal"])
+    // compare total: calculate and from web
+    .expect(totalCalc)
+    .eql(cartFees["total"]);
+});
+
+
+test("TC_GH_025", async (t) => {
+  const task = "TC_GH_025";
+
+  const productKeyList = cartData[task].productsKeys;
+
+  // First buy
+  await helper.chooseProduct(productKeyList[0]);
+  await helper.initCart();
+
+  // Second buy
+  await helper.chooseProduct(productKeyList[0]);
+  await helper.initCart();
+
+  const cartFees = await helper.getFeesFromCart();
+  const totalCalc =
+    cartFees["subTotal"] - cartFees["discount"] + cartFees["shippingFee"];
+
+  let subTotalCalc = 0;
+  for (const product of cartPage.productsList) {
+    const priceStr = await product.price.innerText;
+    const productPrice = helper.getPriceFromStr(priceStr);
+    subTotalCalc += productPrice;
+  }
+
+  await t
+    // compare subTotal: calculate and from web
+    .expect(subTotalCalc)
+    .eql(cartFees["subTotal"])
+    // compare total: calculate and from web
+    .expect(totalCalc)
+    .eql(cartFees["total"]);
+});
+
+test("TC_GH_026", async (t) => {
+  const task = "TC_GH_026";
+  // First buy
+  const productKeyList = cartData[task].productsKeys;
+  await helper.addProductsToCart(productKeyList);
+
+  await helper.initCart();
+
+  // detete a product on cart
+  await cartPage.productsList[0].delete();
+  // wait for cart update
+  await t.wait(1000);
+  // update cart
+  await cartPage.setProductsList();
+
+  const cartFees = await helper.getFeesFromCart();
+  const totalCalc =
+    cartFees["subTotal"] - cartFees["discount"] + cartFees["shippingFee"];
+
+  let subTotalCalc = 0;
+  for (const product of cartPage.productsList) {
+    const priceStr = await product.price.innerText;
+    const productPrice = helper.getPriceFromStr(priceStr);
+    subTotalCalc += productPrice;
+  }
+
+  await t
+    // compare subTotal: calculate and from web
+    .expect(subTotalCalc)
+    .eql(cartFees["subTotal"])
+    // compare total: calculate and from web
+    .expect(totalCalc)
+    .eql(cartFees["total"]);
 });

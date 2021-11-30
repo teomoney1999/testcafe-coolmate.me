@@ -37,30 +37,35 @@ fixture.beforeEach(async () => {
 
 //   await t.expect(cartPage.productsList.length).eql(1);
 // });
-test("TC_GH_020", async (t) => {
-  const task = "TC_GH_020";
+
+test("TC_GH_024", async (t) => {
+  const task = "TC_GH_024";
 
   const productKeyList = cartData[task].productsKeys;
-  await helper.addProductsToCart(productKeyList);
 
+  await helper.addProductsToCart(productKeyList);
   await helper.initCart();
 
-  // get price from every product row on cart
-  let subTotal = 0;
+  // decrease quantity
+  const changeTimes = 1;
+  await cartPage.productsList[0].increaseQuantity(changeTimes);
+  await helper.initCart();
+
+  const cartFees = await helper.getFeesFromCart();
+  const totalCalc =
+    cartFees["subTotal"] - cartFees["discount"] + cartFees["shippingFee"];
+
+  let subTotalCalc = 0;
   for (const product of cartPage.productsList) {
     const priceStr = await product.price.innerText;
-    const priceRemoveUnit = priceStr
-      .replace(".", "")
-      .substring(0, priceStr.length - 1); // remove "." and "đ"
-    const priceNum = parseInt(priceRemoveUnit);
-    subTotal += priceNum;
+    const productPrice = helper.getPriceFromStr(priceStr);
+    subTotalCalc += productPrice;
   }
-  const subTotalFromProductsList = `${subTotal.toString()}đ`;   // 799000đ
-
-  // get price from cart subtotal
-  const subTotalStrFromCart = await cartPage.subTotal.innerText; // 799.000đ
-  const subTotalFromCart = subTotalStrFromCart.replace(".", ""); // 799000đ
-
-  // compare 2 price and get result.
-  await t.expect(subTotalFromProductsList).eql(subTotalFromCart);
+  await t
+    // compare subTotal: calculate and from web
+    .expect(subTotalCalc)
+    .eql(cartFees["subTotal"])
+    // compare total: calculate and from web
+    .expect(totalCalc)
+    .eql(cartFees["total"]);
 });

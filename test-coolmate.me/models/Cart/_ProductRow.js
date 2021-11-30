@@ -44,7 +44,7 @@ class ProductRow {
     }
   }
 
-  async deleteRow() {
+  async delete() {
     await t.click(this.deleteBtn);
   }
 
@@ -64,6 +64,20 @@ class ProductRow {
     ).innerText;
 
     await t.expect(`${comboboxColor} / ${comboboxSize}`).eql(chosenOption);
+  }
+
+  async increaseQuantity(times) {
+    for (let i = 0; i < times; i++) {
+      await t.click(this.quantityIncrease);
+      await t.wait(1000);
+    }
+  }
+
+  async decreaseQuantity(times) {
+    for (let i = 0; i < times; i++) {
+      await t.click(this.quantityDecrease);
+      await t.wait(1000);
+    }
   }
 }
 

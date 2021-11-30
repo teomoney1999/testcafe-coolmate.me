@@ -61,7 +61,23 @@
   "TC_GH_020": {
     "productsKeys": ["Áo khoác size XL", "Áo khoác size L"]
   },
-  "TC_GH_021": {
+  "TC_GH_021 Not done yet": {
     "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_022": {
+    "productsKeys": "Áo khoác size XL", 
+    "couponCode": "Wrong coupon code"
+  },
+  "TC_GH_023": {
+    "productsKeys": "Áo khoác size XL"
+  },
+  "TC_GH_024": {
+    "productsKeys": ["Áo khoác size XL", "Áo khoác size XL"]
+  },
+  "TC_GH_025": {
+    "productsKeys": ["Áo khoác size XL", "Quần Jogger"]
+  },
+  "TC_GH_026": {
+    "productsKeys": ["Áo khoác size XL", "Quần Jogger"]
   }
 }

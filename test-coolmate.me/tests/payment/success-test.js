@@ -1,7 +1,7 @@
 import testCafe from "testcafe";
-import url from "../config.json";
-import xPathSelector from "../helpers/xpath-selector";
-import successPage from "../models/Payment/SuccessPage";
+import url from "../../config.json";
+import xPathSelector from "../../helpers/xpath-selector";
+import successPage from "../../models/Payment/SuccessPage";
 const { Selector, t } = testCafe;
 
 

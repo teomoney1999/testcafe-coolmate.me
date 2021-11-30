@@ -23,6 +23,7 @@ class TestHelper {
   }
 
   async chooseProduct(key) {
+    // to buy product with configuration attribute in ProductOption.json file
     await t.navigateTo(productUrl[key]);
     const option = productOption[key];
     const productKeys = ["color", "size", "quantity"];
@@ -46,6 +47,7 @@ class TestHelper {
   }
 
   getPaymentMethodUrl(methodIdx) {
+    // get payment method via methodIdx - paymentUrls
     const method = Object.keys(paymentMethods).find(
       (key) => paymentMethods[key] === methodIdx
     );
@@ -55,6 +57,7 @@ class TestHelper {
   }
 
   async addProductsToCart(productKeys) {
+    // use to buy multiple product
     if (!Array.isArray(productKeys)) return null;
     if (!productKeys.length) return null;
 
@@ -91,10 +94,42 @@ class TestHelper {
   }
 
   getInfoFromTitle(colorAndSize) {
+    // get size and color from text below title on cart
     // using for color and size of product on cart
     if (!colorAndSize) return null;
     const result = colorAndSize.split("/");
     return { color: result[0].trim(), size: result[1].trim() };
+  }
+
+  getPriceFromStr(priceStr) {
+    // get price from string has format "799.000đ"
+    priceStr = priceStr.trim();
+    // Free
+    if (priceStr === "Miễn phí" || priceStr === "0đ") {
+      return 0;
+    }
+    // Normal price
+    while (priceStr.includes(".")) {
+      // Remove all "."
+      priceStr = priceStr.replace(".", "");
+    }
+    priceStr = priceStr.substring(0, priceStr.length - 1); // Remove "đ"
+    const priceNum = parseInt(priceStr);
+    return !priceNum ? null : priceNum;
+  }
+
+  async getFeesFromCart() {
+    // get all fees from cart
+    const keys = ["subTotal", "discount", "shippingFee", "total"];
+    // fees info
+    const fees = {};
+    for (const key of keys) {
+      if (!fees.hasOwnProperty(key)) {
+        const feeStr = await cartPage[key].innerText;
+        fees[key] = this.getPriceFromStr(feeStr);
+      }
+    }
+    return fees;
   }
 }
 

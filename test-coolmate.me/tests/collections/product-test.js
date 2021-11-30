@@ -1,7 +1,7 @@
 import testCafe from "testcafe";
-import url from "../config.json";
-import xPathSelector from "../helpers/xpath-selector";
-import product from "../models/Product/Product";
+import url from "../../config.json";
+import xPathSelector from "../../helpers/xpath-selector";
+import product from "../../models/Product/Product";
 const { Selector, t } = testCafe;
 
 fixture`Test Cart Model`.page`${url.cart}`;

@@ -26,14 +26,12 @@ class Cart {
     this.couponArea = this.discountBlock.child(".discount-box");
     this.coupon = this.couponArea.child("input");
     this.applyCoupon = this.couponArea.child("button");
-    this.couponError = this.discountBlock
-      .child("p")
-      .withAttribute("class", "discount-message");
+    this.couponError = this.discountBlock.find(".discount-message");
 
     this.pricingArea = Selector(".pricing-info__item");
     this.subTotal = this.pricingArea.nth(0).child("p").nth(1);
     this.discount = this.pricingArea.nth(1).child("p").nth(1);
-    this.deliveryFee = this.pricingArea.nth(2).child("p").nth(1);
+    this.shippingFee = this.pricingArea.nth(2).child("p").nth(1);
     this.total = this.pricingArea.nth(3).child("p").nth(1);
 
     this.notifySection = Selector(".notify");
@@ -72,7 +70,7 @@ class Cart {
   }
 
   async getProductByName(name) {
-    console.log('name', name);
+    console.log("name", name);
     for (let i = 0; i < this.productsList.length; i++) {
       const productName = await this.productsList[i].name.innerText;
       if (productName === name) {

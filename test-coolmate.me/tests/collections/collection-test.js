@@ -1,8 +1,8 @@
 import testCafe from "testcafe";
-import url from "../config.json";
-import xPathSelector from "../helpers/xpath-selector";
+import url from "../../config.json";
+import xPathSelector from "../../helpers/xpath-selector";
 import collections from "../models/Collection/Collections";
-import { click, typeText, exists, eqlText } from "../helpers/common-action";
+import { click, typeText, exists, eqlText } from "../../helpers/common-action";
 const { Selector, t } = testCafe;
 
 const data = {
