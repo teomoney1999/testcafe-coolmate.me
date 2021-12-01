@@ -25,6 +25,7 @@ fixture.beforeEach(async () => {
 test("TC_TT_001", async (t) => {
   const task = "TC_TT_001";
   await paymentPage.fillInfo(paymentInfo[task]);
+  
   await t
     .click(paymentPage.paymentBtn)
     .expect(paymentPage.fullnameError.exists)
