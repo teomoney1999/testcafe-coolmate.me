@@ -1,23 +1,22 @@
 # This is Automatic Testing Project using Testcafe
 
-## Website I test is coolmate.me
-## List of feature that have already been test
+### Website I test is [coolmate.me](https://www.coolmate.me/)
+### List of feature that have already been test
 - Cart
 - Payment
 - Search (not done yet)
 
-## Here is the way to setup the environment 
+### Here is the way to setup the environment 
 
-### 1. Install Node
-### 2. Install needed dependency
+#### 1. Install Node
+#### 2. Install needed dependency
 ```
 $ npm install
 ```
+#### 3. After finishing the installation, project is ready to use
 
-## After finishing the installation, project is ready to use
-
-## Let me explain a little it about how this project is organized
-### 1. File Directory
+### Let me explain a little it about how this project is organized
+#### 1. File Directory
 - All the code file it in test-coolmate.me file
 - Data file contains all the data that gonna type on the website
 - Helper file contains the common function that been use on the whole project
@@ -26,7 +25,7 @@ $ npm install
 - Testcase file contains testcase list that this project test
 - Tests file contains all the testing code using Testcafe
 
-### 2. How to run the project
+#### 2. How to run the project
 - To run the project 
 ```
 $ npm run entry -- --feature <cart | payment | search>
@@ -37,5 +36,5 @@ $ npm run report -- --feature <cart | payment | search> --report <report file di
 ```
 - The report gonna generate at /reports/excel/
 
-# Testcafe is pretty easy to use and I highly recommend it
-# Enjoy and have fun!
+#### Testcafe is pretty easy to use and I highly recommend it
+### Enjoy and have fun!
