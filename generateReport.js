@@ -4,7 +4,6 @@ import {
   getArgv,
   readJson,
 } from "./test-coolmate.me/reports/helper.js";
-// import report from "./test-coolmate.me/reports/json/report_cart_Tue Nov 30 2021 14:48:40 GMT+0700 (Indochina Time).json";
 
 const { feature, reportDir } = getArgv(process.argv);
 
@@ -16,12 +15,10 @@ const generateReport = (reportFileName) => {
   if (!reportFileName) {
     reportFileName = `Test_${new Date()}`;
   }
-
   if (!report) {
     console.log("Can not get report file!");
     return null;
   }
-
   const style = {
     border: {
       left: { style: "medium", color: "#000000" },
